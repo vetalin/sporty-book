@@ -12,12 +12,15 @@ import ru from '@angular/common/locales/ru';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NzButtonModule} from 'ng-zorro-antd/button';
+import { TemplateComponent } from './template/template.component';
 
 registerLocaleData(ru);
 
 @NgModule({
   declarations: [
-    StartComponent
+    StartComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ registerLocaleData(ru);
     }),
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzButtonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }],
   bootstrap: [StartComponent]
